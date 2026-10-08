@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    color: #ffffff;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+p.sub-judul {
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#ilustrasi {
+    display: none;
+}
+
+#formulir {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+#formulir > div {
+    width: 100%;
+    max-width: 400px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="button"] {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+}
+
+button[type="button"]:hover {
+    background-color: #f9f9f9;
+}
+
+button[type="submit"] {
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: none;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #1a252f;
+}
+
+.pemisah {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999999;
+    margin-bottom: 20px;
+}
+
+.pemisah::before,
+.pemisah::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #dddddd;
+}
+
+.pemisah span {
+    padding: 0 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: inherit;
+    outline: none;
+}
+
+.label-grup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.lupa-pass {
+    font-size: 13px;
+    color: #e67e22;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.ingat-grup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+label.ingat {
+    margin: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    main {
+        flex-direction: row;
+    }
+
+    #ilustrasi {
+        display: flex;
+        flex: 1.2;
+        background-color: #2c3e50;
+        background-image: url('../image/seni.jpg'); 
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-position: center;
+        padding: 60px;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    #ilustrasi p {
+        color: #dddddd; 
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    #formulir {
+        flex: 1;
+    }
+}
